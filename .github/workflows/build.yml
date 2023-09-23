@@ -32,7 +32,7 @@ jobs:
       - name: Install Railway
         run: npm i -g @railway/cil
 
-      -name: Deploy
+      - name: Deploy
        run: railway up
        env:
          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
