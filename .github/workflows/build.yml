@@ -38,65 +38,6 @@ jobs:
         uses: slackapi/slack-github-action@1.24.0
         with:
           payload: |
-                {
-                "text": "CICD Workshop by Liang Chang",
-                "blocks": [
-                  {
-                    "type": "section",
-                    "text": {
-                      "type": "mrkdwn",
-                      "text": "Name : Liang Chang"
-                    }
-                  },
-                  {
-                    "type": "section", 
-                    "text": {
-                        "type": "mrkdwn",
-                        "text": "Matriculation : E1133133"
-                    }
-                  },
-                  {
-                    "type": "section", 
-                    "text": {
-                        "type": "mrkdwn",
-                        "text": "Email : e1133133@u.nus.edu"
-                    }
-                  },
-                  {
-                    "type": "section", 
-                    "text": {
-                        "type": "mrkdwn",
-                        "text": "Repository : https://github.com/LittleLC/dipsa41ccide"
-                    }
-                  },
-                  {
-                    "type": "section", 
-                    "text": {
-                        "type": "mrkdwn",
-                        "text": "Deployment : dipsa41ccicd-production-277b.up.railway.app"
-                    }
-                  }
-                ]
-              }
-        env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL}}
-          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
-        with:
-          skipIfReleaseExists: true
-          tag: latest
-          artifacts: release.tar.gz,foo/*.txt
-          bodyFile: body.md
-      - name: Install Railway
-        run: npm i -g @railway/cli
-      - name: Deploy
-        run: railway up
-        env:
-          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-      - name: Send custom JSON data to Slack workflow
-        id: slack
-        uses: slackapi/slack-github-action@1.24.0
-        with:
-          payload:
               {
                 "text": "CICD Workshop by Liang Chang",
                 "blocks": [
@@ -139,4 +80,4 @@ jobs:
               }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL}}
-          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK           
+          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
