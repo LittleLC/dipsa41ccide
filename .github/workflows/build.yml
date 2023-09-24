@@ -45,35 +45,35 @@ jobs:
                     "type": "section",
                     "text": {
                       "type": "mrkdwn",
-                      "text": "Name : Liang Chang"
+                      "text": "*Name :*\n Liang Chang"
                     }
                   },
                   {
                     "type": "section", 
                     "text": {
                         "type": "mrkdwn",
-                        "text": "Matriculation : E1133133"
+                        "text": "*Matriculation :*\n A0276818M"
                     }
                   },
                   {
                     "type": "section", 
                     "text": {
                         "type": "mrkdwn",
-                        "text": "Email : e1133133@u.nus.edu"
+                        "text": "*Email :*\n e1133133@u.nus.edu"
                     }
                   },
                   {
                     "type": "section", 
                     "text": {
                         "type": "mrkdwn",
-                        "text": "Repository : https://github.com/LittleLC/dipsa41ccide"
+                        "text": "*Repository :*\n https://github.com/LittleLC/dipsa41ccide"
                     }
                   },
                   {
                     "type": "section", 
                     "text": {
                         "type": "mrkdwn",
-                        "text": "Deployment : dipsa41ccicd-production-277b.up.railway.app"
+                        "text": "*Deployment :*\n dipsa41ccicd-production-277b.up.railway.app"
                     }
                   }
                 ]
