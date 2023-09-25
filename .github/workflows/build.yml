@@ -77,9 +77,9 @@ jobs:
                     "type": "section", 
                     "text": {
                         "type": "mrkdwn",
-                        "text": "*Deployment :*\n ${{ secrets.DEPLOYMENT}}"
+                        "text": "*Deployment :*\n ${{ secrets.DEPLOYMENT}} \n<${{ secrets.DEPLOYMENT}}|Open application>"
                     }
-                  }
+                  }						
                 ]
               }
         env:
