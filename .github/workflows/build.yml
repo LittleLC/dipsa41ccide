@@ -77,7 +77,7 @@ jobs:
                     "type": "section", 
                     "text": {
                         "type": "mrkdwn",
-                        "text": "*Deployment :*\n dipsa41ccicd-production-277b.up.railway.app"
+                        "text": "*Deployment :*\n ${{ secrets.DEPLOYMENT}}"
                     }
                   }
                 ]
