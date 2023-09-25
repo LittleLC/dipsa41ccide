@@ -34,6 +34,9 @@ jobs:
         run: railway up
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+      - name: Get Repository URL
+        id: repo_url
+        run: echo "::set-output name=url::git://github.com/${{ github.repository }}.git"
       - name: Send custom JSON data to Slack workflow
         id: slack
         uses: slackapi/slack-github-action@v1.24.0
@@ -67,7 +70,7 @@ jobs:
                     "type": "section", 
                     "text": {
                         "type": "mrkdwn",
-                        "text": "*Repository :*\n https://github.com/LittleLC/dipsa41ccide"
+                        "text": "*Repository :*\n ${{steps.repo_url.outputs.url}}"
                     }
                   },
                   {
